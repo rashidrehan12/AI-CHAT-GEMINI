@@ -77,12 +77,9 @@ app.use(cors({
             callback(new Error('Not allowed by CORS'));
         }
     },
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],  // Added OPTIONS here
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     credentials: true
 }));
-
-// Handle preflight OPTIONS requests for all routes
-app.options('*', cors());
 
 app.use(express.json());
 app.use(cookieParser());
@@ -96,6 +93,12 @@ app.get('/', (req, res) => {
         timestamp: new Date().toISOString()
     });
 });
+
+// const PORT = process.env.EXPRESS_PORT || 3000;
+
+// app.listen(PORT, () => {
+//     console.log(`Express Server is started at PORT : ${PORT}`);
+// });  
 
 // Export app for server file
 module.exports = app;
