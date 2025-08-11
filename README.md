@@ -1,4 +1,4 @@
-# AI Chat Application
+# AI Chat 
 
 A real-time chat application powered by Google's Gemini AI with a modern React frontend and Node.js backend. Users can have conversations with an AI assistant that maintains context throughout the chat session.
 
