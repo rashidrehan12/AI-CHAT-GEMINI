@@ -92,7 +92,7 @@ The frontend will start on `http://localhost:5173`
 ## 🏗 Project Structure
 
 ```
-ai-chat-application/
+ai-chat-gemini/
 ├── backend/
 │   ├── src/
 │   │   ├── app.js              # Express app configuration
