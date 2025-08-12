@@ -14,7 +14,7 @@ const mcpTools = new MCPTools();
 // Environment-based CORS configuration
 const allowedOrigins = [
     "http://localhost:5173", // Local development
-     "https://ai-chat-gemini-rashid.vercel.app/", // actual Vercel URL
+     "https://ai-chat-gemini-rashid.vercel.app", // actual Vercel URL
     process.env.FRONTEND_URL // Environment variable for production
 ].filter(Boolean); // Remove undefined values
 

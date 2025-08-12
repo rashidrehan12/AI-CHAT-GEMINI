@@ -57,17 +57,31 @@ export const registerUser = createAsyncThunk(
   }
 );
 
+// export const logoutUser = createAsyncThunk(
+//   'auth/logoutUser',
+//   async (_, { rejectWithValue }) => {
+//     try {
+//       await axios.get(`${API_BASE_URL}/auth/logout`);
+//       return null;
+//     } catch (error) {
+//       return rejectWithValue(error.response?.data?.message || 'Logout failed');
+//     }
+//   }
+// );
 export const logoutUser = createAsyncThunk(
   'auth/logoutUser',
   async (_, { rejectWithValue }) => {
     try {
-      await axios.get(`${API_BASE_URL}/auth/logout`);
+      await axios.get(`${API_BASE_URL}/auth/logout`, {
+        withCredentials: true // important for sending cookies cross-site
+      });
       return null;
     } catch (error) {
       return rejectWithValue(error.response?.data?.message || 'Logout failed');
     }
   }
 );
+
 
 const authSlice = createSlice({
   name: 'auth',
