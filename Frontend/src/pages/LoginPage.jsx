@@ -143,7 +143,7 @@ const LoginPage = () => {
                 to="/register"
                 className="text-purple-600 dark:text-purple-400 hover:text-pink-500 dark:hover:text-pink-300 font-medium"
               >
-                Create one here
+                Create here
               </Link>
             </p>
           </div>

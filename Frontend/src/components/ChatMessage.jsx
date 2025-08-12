@@ -17,7 +17,7 @@ const ChatMessage = ({ message, isUser, timestamp }) => {
         <div
           className={`px-4 py-3 rounded-2xl shadow-sm ${
             isUser
-              ? 'bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-br-md'
+              ? 'bg-gradient-to-br from-purple-500 to-indigo-600 text-white rounded-br-md'
               : 'bg-gradient-to-br from-purple-500 to-indigo-600 text-white rounded-bl-md'
           }`}
         >
@@ -64,7 +64,7 @@ const ChatMessage = ({ message, isUser, timestamp }) => {
                       href={href} 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
+                      className="text-purple-600 hover:text-purple-800 underline"
                     >
                       {children}
                     </a>
@@ -105,7 +105,7 @@ const ChatMessage = ({ message, isUser, timestamp }) => {
       </div>
 
       {isUser && (
-        <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+        <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-full flex items-center justify-center">
           <User className="w-4 h-4 text-white" />
         </div>
       )}

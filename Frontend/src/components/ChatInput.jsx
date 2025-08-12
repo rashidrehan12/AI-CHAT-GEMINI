@@ -29,20 +29,21 @@ const ChatInput = ({ onSendMessage, disabled = false }) => {
             onKeyPress={handleKeyPress}
             placeholder="Type your message here..."
             disabled={disabled}
-            className="w-full px-4 py-3 pr-12 border border-gray-300 dark:bg-slate-500 dark:text-white rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none max-h-32 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="w-full px-4 py-3 pr-12 border border-purple-300 dark:bg-slate-500 dark:text-white rounded-2xl focus:ring-2 focus:ring-purple-500 focus:border-transparent resize-none max-h-32 disabled:opacity-50 disabled:cursor-not-allowed"
             rows={1}
             style={{
               minHeight: '48px',
               height: 'auto'
             }}
           />
-          <MessageCircle className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <MessageCircle className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-purple-400" />
+          
         </div>
         
         <button
           type="submit"
           disabled={!message.trim() || disabled}
-          className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 disabled:from-gray-300 disabled:to-gray-400 text-white p-3 rounded-2xl transition-all duration-200 disabled:cursor-not-allowed shadow-lg hover:shadow-xl transform hover:scale-105 disabled:transform-none"
+        className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-pink-500 hover:to-indigo-500 disabled:from-gray-300 disabled:to-gray-400 text-white p-3 rounded-2xl transition-all duration-200 disabled:cursor-not-allowed shadow-lg hover:shadow-pink-400/50 transform hover:scale-105 disabled:transform-none"
         >
           <Send className="w-5 h-5" />
         </button>
